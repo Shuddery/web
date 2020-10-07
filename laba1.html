@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <script>
+      let arr = new Array();
+      var count = 5;
+      for (var i = 0; i < count; i++)
+        arr[i] = parseInt(prompt("Введите целое число:", "")); // parseInt() принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления.
+
+      arr.sort((a, b) => a - b); // сортировка по возрастанию
+      document.write("Массив по возрастанию: " + arr.join(", ")); // вывод массива
+      //console.log(arr);
+
+      var maxValue = arr[0];
+      for (var i = 1; i < arr.length; i++) {
+        var currentValue1 = arr[i];
+        if (currentValue1 > maxValue) {
+          maxValue = currentValue1;
+        }
+      }
+      document.write("<br>Наибольший элемент массива: " + maxValue);
+      //console.log(maxValue);
+
+      var minValue = arr[0];
+      for (var i = 1; i < arr.length; i++) {
+        var currentValue2 = arr[i];
+        if (currentValue2 < minValue) {
+          minValue = currentValue2;
+        }
+      }
+      document.write("<br>Наименьший элемент массива: " + minValue);
+      //console.log(minValue);
+
+      var sum = 0;
+      for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      document.write("<br>Сумма элементов массива: " + sum);
+      //console.log(sum);
+    </script>
+  </body>
+</html>

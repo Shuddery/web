@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 2</title>
+</head>
+<body>
+    <table id="table" border="1">
+        <caption>Студенты</caption>
+	</table>
+	
+	<table id="second" align="center">
+	
+	</table>
+
+	<p class="avg"></p>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script>
+     let students = [
+	{
+		name: 'Иван',
+		surname: 'Иванов',
+		age: 18,
+        averageball : 7
+	},
+	{
+		name: 'Вася',
+		surname: 'Пупкин',
+		age: 19,
+        averageball : 4
+	},
+	{
+		name: 'Саня',
+		surname: 'Костылев',
+		age : 19,
+        averageball : 9
+	},
+];
+
+	// Первый вариант
+	let table = document.getElementById('table');
+
+	for (let student of students) {
+		
+		let tr = document.createElement('tr');
+		
+		
+		let td1 = document.createElement('td');
+		td1.innerHTML = student.name;
+		tr.appendChild(td1);
+		
+		let td2 = document.createElement('td');
+		td2.innerHTML = student.surname;
+		tr.appendChild(td2);
+		
+		let td3 = document.createElement('td');
+		td3.innerHTML = student.age;
+		tr.appendChild(td3);
+
+		let td4 = document.createElement('td4');
+		td4.innerHTML = student.averageball;
+		tr.appendChild(td4);
+
+
+
+		
+		table.appendChild(tr);
+	}		
+	// Второй вариант 
+
+	for (var i = 0 ; i <students.length ; i++) {
+		$("#second").append("<tr> <td>" + students[i].name + "</td>" +
+	   "<td>" + students[i].surname +  "</td>" +
+	     "<td>" + students[i].age + "</td>" +
+		  "<td>" +  students[i].averageball + "</td>" + "</tr>");
+		}
+	// Подсчет среднего 1
+    function allaverage(array) {
+        var sum = 0;
+        for (var i = 0; i < array.length; i++) {
+                sum += array[i].averageball;
+            }
+            return sum / array.length;
+       };
+
+
+    $("body").append("<p> Средняя оценка: " + allaverage(students) +"</p>");
+
+  // Подсчет среднего 2
+	avg = 0, amount = 0;
+	$('td4').each(function(){
+		avg += +($(this).text());
+		amount++;
+	});
+	avg /= amount;
+	$('.avg').text(avg);
+    </script>
+</body>
+</html>

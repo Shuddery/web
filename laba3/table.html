@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Laba 3
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label>Surname*</label><label class="validation-error hide" id="surnameValidationError">This field is required.</label>
+                        <input type="text" name="surname" id="surname">
+                    </div>
+                    <div>
+                        <label>Age</label>
+                        <input type="text" name="age" id="age">
+                    </div>
+                    <div>
+                        <label>Averageball*</label><label class="validation-error hide" id="averageballValidationError">This field is required.</label>
+                        <input type="text" name="averageball" id="averageball">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Age</th>
+                            <th>Averageball</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    
+
+</body>
+
+</html>

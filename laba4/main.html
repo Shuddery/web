@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+  <table id="table">
+    <thead>
+    <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Age</th>
+    <th>Averageball</th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    
+    </tbody>
+    </table>
+    <form id="form"  autocomplete="off">
+      <label for="name">
+      Введите Имя
+      <input type="text" id="name" name="name">
+      </label>
+      <br>
+      <label for="surname">
+      Введите Фамилию
+      <input type="text" id="surname" name="surname">
+      </label>
+      <br>
+      <label for="age">
+      Введите Возраст
+      <input type="text" id="age" name="age">
+      </label>
+      <br>
+      <label for="averageball">
+      Введите Средний Балл
+      <input type="text" id="averageball" name="average">
+      </label>
+      <br>
+      <button type="submit">Press me</button>
+      </form>
+      <div class="alert">
+        <span class="closebtn">&times;</span>
+        Введите значения
+        </div>
+      <p id="avg"></p>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="main.js">
+  </script>
+  <script>
+function onDelete() {
+    if (confirm('Are you sure to delete this record ?')) {
+      var row = $('#table tbody tr td').parents('tr');
+      var parentTableDOMElement = row.parents("table:first")[0];
+      parentTableDOMElement.deleteRow(row[0].rowIndex);
+    }
+  }
+
+function onEdit(td) {
+  selectedRow = td.parentElement.parentElement;
+  document.getElementById("name").value = selectedRow.cells[0].innerHTML;
+  document.getElementById("surname").value = selectedRow.cells[1].innerHTML;
+  document.getElementById("age").value = selectedRow.cells[2].innerHTML;
+  document.getElementById("averageball").value = selectedRow.cells[3].innerHTML;
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+	{
+		"name": "Иван",
+		"surname": "Иванов",
+		"age": "18",
+        "averageball" : "7"
+	},
+	{
+		"name": "Вася",
+		"surname": "Пупкин",
+		"age": "19",
+        "averageball" : "4"
+	},
+	{
+		"name": "Саня",
+		"surname": "Костылев",
+		"age" : "19",
+        "averageball" : "9"
+	}
+]

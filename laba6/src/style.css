@@ -1,0 +1,91 @@
+.odd {
+  background-color: #edb749;
+}
+
+.even {
+  background-color: #252f48;
+}
+
+.less {
+  color: red;
+  font-weight: bold;
+}
+
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  width: 640px;
+  text-align: left;
+  border-collapse: collapse;
+  background: #252f48;
+  margin: 10px;
+}
+table th {
+  color: #edb749;
+  border-bottom: 1px solid #37b5a5;
+  padding: 12px 17px;
+}
+table td {
+  color: #cad4d6;
+  border-bottom: 1px solid #37b5a5;
+  border-right: 1px solid #37b5a5;
+  padding: 7px 17px;
+}
+table tr:last-child td {
+  border-bottom: none;
+}
+table td:last-child {
+  border-right: none;
+}
+table tr:hover td {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 10%;
+  background-color: #ddd;
+  color: #000;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.alert {
+  display: none;
+  padding: 20px;
+  width: 200px;
+  background-color: tomato;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
